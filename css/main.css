@@ -1,0 +1,150 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+div.header_background {
+ background: url(https://cdn.pixabay.com/photo/2013/11/28/11/29/flower-220221__480.jpg) repeat;
+  border: 2px solid black;
+}
+div.header_transbox {
+  margin: 30px;
+  background-color: #00b0b3;
+  border: 1px solid black;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  padding: 30px;
+  text-align: center;
+  color: #FFFFE0;
+/*background: background-image:url(https://cdn.pixabay.com/photo/2018/01/04/14/21/oranges-3060792_1280.jpg);*/
+    }
+/*https://cdn.pixabay.com/photo/2013/11/28/11/29/flower-220221__480.jpg*/
+/*https://cdn.pixabay.com/photo/2014/12/15/19/28/abstract-569514_1280.jpg*/
+
+
+div.header_transbox h1 {
+  font-size: 50px;
+  margin: 5%;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #00b0b3;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+/*#00b0b3*/
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFE0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #b3feff;
+  color: #b35c00;
+}
+/*#b3feff*/
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: none;
+  padding-left: 20px;
+}
+/*background-color: #f1f1f1;*/
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Right image */
+.img_right {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Left image */
+.img_left {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #00b0b3;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+/* Smaller Titles */
+h2, h3, h5 {
+  color: #00b0b3;
+}
+
+#contact {
+  color: #FFFFE0;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
