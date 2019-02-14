@@ -1,0 +1,82 @@
+<!-- TODO: make the header appear! -->
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+  portfolio_website
+{% endblock %}
+
+{% block styles %}
+<!-- add icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--inherite the css of bootstrap-->
+  {{ super() }}
+  <!-- add own css -->
+  <link rel="stylesheet" href="../static/css/main.css">
+{% endblock %}
+
+{% block scripts %}
+  <!--inherite the Javascript? of bootstrap-->
+  {{ super() }}
+{% endblock %}
+
+  <body>
+    <!-- TODO: make the header appear! -->
+    {% block header %}
+      <header>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header_background">
+              <div class="header_transbox">
+                <h1>
+                  Yurie Seijas
+                </h1>
+                <p>
+                  No Experience in Computer Language &nbsp;/&nbsp; Fluent in Japanese Language
+                </p>
+              </div> <!-- ends header_transbox -->
+            </div> <!-- ends header_background -->
+          </div> <!-- ends col-md-12 -->
+        </div> <!-- ends row -->
+      </header>
+    {% endblock %}
+
+    {% block navbar %}
+      <nav>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="topnav">
+              <a href="{{ url_for('index') }}">Home</a>
+              <a href="https://www.w3schools.com/html/default.asp" target="_blank">Learn HTML</a>
+              <a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn CSS</a>
+              <a href="https://codingtemple.com/" target="_blank" style="float:right">Coding Temple</a>
+            </div> <!-- ends topnav -->
+          </div> <!-- ends col-md-12 -->
+        </div> <!-- ends row -->
+      </nav>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+      <!-- add bootstrap -->
+      <footer class="page-footer font-small blue">
+        <div class="row">
+          <div class= "col-md-12">
+            <h3 id="contact">Contact</h3>
+            <i class="material-icons">email</i>
+            <a href=" mailto:yuriebmori012@gmail.com">
+                  yuriebmori012@gmail.com</a>
+          <!-- Copyright - deleted -->
+          <!--  <div class="footer-copyright text-center py-3">© 2019 Copyright: <a href="#"> Yurijas.com</a> </div> -->
+          </div> <!-- ends col-md-12 -->
+        </div> <!-- ends row -->
+      </footer>
+      <!-- previous footer -->
+  <!--  <div class="footer">
+          <h2 id="contact">Contact</h2>
+          <i class="material-icons">email</i>
+          <a href="mailto:yuriebmori012@gmail.com">
+                yuriebmori012@gmail.com</a>
+        </div> -->
+    {% endblock %}
+  </body>
