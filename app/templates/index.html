@@ -1,58 +1,20 @@
-﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-   <meta charset="utf-8">
-   <title>portfolio_website</title>
-   <!-- add icon -->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!-- add bootstrap 4 css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- add own css -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-  </head>
+{% extends 'base.html' %}
 
-  <body>
-
-    <header>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="header_background">
-            <div class="header_transbox">
-              <h1>
-                Yurie Seijas
-              </h1>
-              <p>
-                No Experience in Computer Language &nbsp;/&nbsp; Fluent in Japanese Language
-              </p>
-            </div> <!-- ends header_transbox -->
-          </div> <!-- ends header_background -->
-        </div> <!-- ends col-md-12 -->
-      </div> <!-- ends row -->
-    </header>
-
-    <nav>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="topnav">
-            <a href="https://codingtemple.com/" target="_blank">Coding Temple</a>
-            <a href="https://www.w3schools.com/html/default.asp" target="_blank">Learn HTML</a>
-            <a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn CSS</a>
-            <a href="#" target="_blank" style="float:right"></a>
-          </div> <!-- ends topnav -->
-        </div> <!-- ends col-md-12 -->
-      </div> <!-- ends row -->
-    </nav>
-
+{% block content %}
     <main>
       <div class="my-container">
         <div class="row">
           <div class="col-md-8">
               <div class="card"> <!-- article2: lefttop -->
-                <h2>MY HOBBIES</h2>
+                {% if article1 == '' %}
+                  <h2>article1</h2>
+                {% else %}
+                  <h2>{{ article1 }}</h2>
+                {% endif %}
                 <h5>Poke&#769;mon Go and Hula Hooping</h5>
                 <div class="images_left">
-                  <img class="img_left" src="./images/dolphin-hoop.jpg" alt="hulahoop" />
-                  <img class="img_left" src="./images/pokemon-dog.jpg" alt="pokemon" />
+                  <img class="img_left" src="../static/images/dolphin-hoop.jpg" alt="hulahoop" />
+                  <img class="img_left" src="../static/images/pokemon-dog.jpg" alt="pokemon" />
                 </div> <!-- ends images_left -->
                 <p>
                   Hobby 1: Poke&#769;mon Go <br />
@@ -65,11 +27,15 @@
               </div> <!-- ends card -->
 
               <div class="card"> <!-- article2: leftbottom -->
-                <h2>MY GOAL</h2>
+                {% if article2 == '' %}
+                  <h2>article2</h2>
+                {% else %}
+                  <h2>{{ article2 }}</h2>
+                {% endif %}
                 <h5>Why I Want to Become a Web Developer</h5>
                 <div class="images_left">
-                  <img class="img_left" src="./images/KAME.jpeg" alt="sea_turtle" />
-                  <img class="img_left" src="./images/cat-work.jpg" alt="study_cat" />
+                  <img class="img_left" src="../static/images/KAME.jpeg" alt="sea_turtle" />
+                  <img class="img_left" src="../static/images/cat-work.jpg" alt="study_cat" />
                 </div> <!-- ends images_left -->
                 <p>
                   I want a remote job that allows me to travel around.
@@ -83,7 +49,7 @@
           <div class="col-md-4">
               <div class="card"> <!-- about me: righttop -->
                 <h2>About Me</h2>
-                <img src="./images/SUP.JPG" alt="SUP" class="img_right" />
+                <img src="../static/images/SUP.JPG" alt="SUP" class="img_right" />
                 <p>
                   I came to the U.S.from Japan last Autumn. Getting <acronym title="Stand Up Paddleboard">SUP</acronym> is one of my dreams. I love Tex-Mex. My &quot; L &quot; &amp; &quot; R &quot; make the same sound.
                 </p>
@@ -93,6 +59,7 @@
                 <h3>
                   More About Me
                 </h3>
+                <!-- apply Jinja2 to dl  -->
                 <dl> <!-- list -->
                   <dt>College Degree</dt>
                   <dd>- Spanish</dd>
@@ -124,27 +91,4 @@
         </div> <!-- ends row -->
       </div> <!-- ends container -->
     </main>
-
-    <!-- add bootstrap -->
-    <footer class="page-footer font-small blue">
-      <div class="row">
-        <div class= "col-md-12">
-          <h3 id="contact">Contact</h3>
-          <i class="material-icons">email</i>
-          <a href=" mailto:yuriebmori012@gmail.com">
-                yuriebmori012@gmail.com</a>
-        <!-- Copyright - deleted -->
-        <!--  <div class="footer-copyright text-center py-3">© 2019 Copyright: <a href="#"> Yurijas.com</a> </div> -->
-        </div> <!-- ends col-md-12 -->
-      </div> <!-- ends row -->
-    </footer>
-    <!-- previous footer -->
-<!--  <div class="footer">
-        <h2 id="contact">Contact</h2>
-        <i class="material-icons">email</i>
-        <a href="mailto:yuriebmori012@gmail.com">
-              yuriebmori012@gmail.com</a>
-      </div> -->
-
-  </body>
-</html>
+{% endblock %}
