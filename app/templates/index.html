@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ super() }} - Home
+{% endblock %}
+
+{% block app_content %}
+  <body>
+    <main>
+      <div class="my-container">
+        <div class="row">
+          <div class="col-md-8">
+              <div class="card"> <!-- article2: lefttop -->
+                <h2>{{ article1 }}</h2>
+                <h5>Poke&#769;mon Go and Hula Hooping</h5>
+                <div class="images_left">
+                  <img class="img_left" src="./images/dolphin-hoop.jpg" alt="hulahoop" />
+                  <img class="img_left" src="./images/pokemon-dog.jpg" alt="pokemon" />
+                </div> <!-- ends images_left -->
+                <p>
+                  Hobby 1: Poke&#769;mon Go <br />
+                  I love Poke&#769;mon catching. Boston is great place to play Poke&#769;mon Go. On monthly Poke&#769;mon Community Day event, Boston Common is filled with Poke&#769;mon trainers. Let's become Poke&#769;mon friends if you have an account!
+                </p>
+                <p>
+                  Hobby 2: Hula-hoop <br />
+                  I tend to browse web or watch TV while I hulahoop. It's very relaxing. My longest record is two hours.
+                </p>
+              </div> <!-- ends card -->
+
+              <div class="card"> <!-- article2: leftbottom -->
+                <h2>{{ article2 }}</h2>
+                <h5>Why I Want to Become a Web Developer</h5>
+                <div class="images_left">
+                  <img class="img_left" src="./images/KAME.jpeg" alt="sea_turtle" />
+                  <img class="img_left" src="./images/cat-work.jpg" alt="study_cat" />
+                </div> <!-- ends images_left -->
+                <p>
+                  I want a remote job that allows me to travel around.
+                </p>
+                <p>
+                  When I was working in Japan, I noticed the only friends who seemed to be traveling around that I knew were; either web developer or university student. My web developer friend recommended some websites to learn HTML, CSS and JavaScript from. Studying just by myself, I still don't know most of things but I got interested in web developing. I want to make my skill good enough to have web developing remote job in the future!
+                </p>
+              </div> <!-- ends card -->
+          </div> <!-- ends col-md-8 -->
+
+          <div class="col-md-4">
+              <div class="card"> <!-- about me: righttop -->
+                <h2>About Me</h2>
+                <img src="./images/SUP.JPG" alt="SUP" class="img_right" />
+                <p>
+                  I came to the U.S.from Japan last Autumn. Getting <acronym title="Stand Up Paddleboard">SUP</acronym> is one of my dreams. I love Tex-Mex. My &quot; L &quot; &amp; &quot; R &quot; make the same sound.
+                </p>
+              </div> <!-- ends card -->
+
+              <div class="card"> <!-- More about me: rightmiddle -->
+                <h3>
+                  More About Me
+                </h3>
+                <dl> <!-- list -->
+                  <dt>College Degree</dt>
+                  <dd>- Spanish</dd>
+                  <dt>Studying Languge</dt>
+                  <dd>- html</dd>
+                  <dd>- css</dd>
+                  <dd>- python</dd>
+                  <dt>Job Experience</dt>
+                  <dd>- international program leader</dd>
+                  <dd>- translation supporter</dd>
+                  <dd>- accounts analyst</dd>
+                  <dd>- English teacher</dd>
+                </dl>
+              </div> <!-- ends card -->
+
+              <div class="card"> <!-- form: rightbottom -->
+                <h5>
+                  Please select your status with Python: You are...
+                </h5>
+                <form> <!-- form -->
+                  <input type="radio" name="python" value="work"> using it for work<br>
+                  <input type="radio" name="python" value="study"> studying Python<br>
+                  <input type="radio" name="python" value="no"> not using Python<br>
+                  <input type="radio" name="python" value="will study"> thinking of learning it<br>
+                  <input type="radio" name="python" value="other"> other
+                </form>
+              </div> <!-- ends card -->
+          </div> <!-- ends col-md-3 -->
+        </div> <!-- ends row -->
+      </div> <!-- ends container -->
+    </main>
+  </body>
+{% endblock %}

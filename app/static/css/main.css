@@ -1,0 +1,168 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+/*body*/
+body {
+  font-family: Arial;
+  background: #A1B2B3; /*originally #f1f1f1*/
+}
+
+.my-container {
+  margin: 0px 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Header/Blog Title */
+div.header_background {
+ background: url(../images/flower-background.jpg) repeat;
+ border: 2px solid #C76700;
+}
+div.header_transbox {
+  margin: 30px;
+  background-color: #00b0b3;
+  border: 1px solid black;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  padding: 30px;
+  text-align: center;
+  color: #FFFFE0;
+}
+
+div.header_transbox h1 {
+  font-size: 50px;
+  margin: 5%;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #00b0b3;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  /*TODO: Figure out if I want to do sticky or not and how to do*/
+  /*position: sticky;
+  top: 0;
+  z-index: 100;*/
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFE0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #A1B2B3; /*previous: #b3feff;*/
+  color: #007D80; /*previous: #b35c00;*/
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  /*width: 25%;*/
+  background-color: none;
+  padding-left: 20px;
+}
+
+/* Right image */
+.img_right {
+  max-width: 100%;
+  padding: 20px;
+  height: 150px;
+}
+
+/* Left images */
+.images_left::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Left image */
+.img_left {
+  float: left;
+  width: 45%;
+  padding: 20px;
+  height:200px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+footer {
+  padding: 15px;
+  text-align: center;
+  margin-top: 25px;
+  background-color: #00b0b3;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+/*Copyright*//*
+.footer-copyright {
+  background-color: #A1B2B3;
+  padding: 5px!important;
+  margin-top: 10px;
+}*/
+
+/* Smaller Titles */
+h2, h3, h5 {
+  color: #00b0b3;
+}
+
+#contact {
+  color: #FFFFE0;
+}
+
+
+/******************************
+media settings
+******************************/
+
+/*previous media setting for left and right columns*/
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}  */
+/*previous media setting for topnav*/
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+} */
+/*for devices between 500px and 770px*/
+@media only screen and (min-width: 500px) and (max-width: 770px) {
+  .img_right {
+    width: 50%;
+  }
