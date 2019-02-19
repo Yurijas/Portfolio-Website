@@ -84,7 +84,7 @@ def login():
         # if user does exist, and credentials are correct, log them in and send them to their profile page
         login_user(user, remember=form.remember_me.data)
         flash('You are now logged in!')
-        return redirect(url_for('posts', username=current_user.username))
+        return redirect(url_for('index'))
 
     return render_template('login.html', title='Login', form=form)
 
