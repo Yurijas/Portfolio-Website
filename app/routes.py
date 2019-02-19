@@ -4,32 +4,33 @@ from app.forms import ContactForm, LoginForm, RegisterForm
 from app.models import Contact, User # Post
 from flask_login import current_user, login_user, logout_user, login_required
 
+
 @app.route('/')
 @app.route('/index')
 @app.route('/index/<name>', methods=['GET'])
 def index(article1='MY HOBBIES', article2 ='MY GOAL'):
-    return render_template('index.html', article1=article1, article2=article2, title='HOME')
+    form = ContactForm()
+    return render_template('index.html', form=form, article1=article1, article2=article2, title='HOME')
 #*************************************
 #*************************************
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-
     # when form is submitted appends to post lists, re-render posts page
     if form.validate_on_submit():
-        info = form.info.data
-        contact = Contact(info=info)
+        contact = Contact(
+            first_name = form.first_name.data,
+            last_name = form.last_name.data,
+            email = form.email.data
+        )
 
-        # add post variable to database stage, then commit
         db.session.add(contact)
         db.session.commit()
-
+        flash('Thank you for your contact information!')
         return redirect(url_for('contact'))
 
-    info = Contact.query.all()
-
-    return render_template('contact.html', title='Contact', form=form, info=info)
+    return render_template('contact.html', title='Contact', form=form)
 
 #*************************************
 # ***** post *****

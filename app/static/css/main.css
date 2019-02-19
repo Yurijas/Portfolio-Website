@@ -16,7 +16,7 @@ body {
 
 /* Header/Blog Title */
 div.header_background {
- background: url(../static/images/flower-background.jpg) repeat;
+ background: url(../images/flower-background.jpg) repeat;
  border: 2px solid #C76700;
 }
 div.header_transbox {

@@ -19,7 +19,9 @@
   {{ super() }}
 {% endblock %}
 
-  <body>
+{% block body %}
+  <!-- <div class="container"> -->
+  <!-- <body> -->
     <!-- TODO: make the header appear! -->
     {% block header %}
       <header>
@@ -78,4 +80,5 @@
                 yuriebmori012@gmail.com</a>
         </div> -->
     {% endblock %}
-  </body>
+  <!-- </body> -->
+{% endblock %}
