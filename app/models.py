@@ -21,7 +21,6 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(30), unique=True, index=True)
     email = db.Column(db.String(120), unique=True)
     password_hash = db.Column(db.String(256))
-    posts = db.relationship('Post', backref=db.backref('user', lazy='joined'))
 
     # setup methods to set and check password_hash
     def set_password(self, password):
