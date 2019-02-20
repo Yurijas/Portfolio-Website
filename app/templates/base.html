@@ -52,17 +52,15 @@
               <a href="{{ url_for('register') }}">Register</a>
               {% if current_user.is_authenticated %}
                 <!-- put logout link here -->
-                <li class="nav-item">
+                <!-- <li class="nav-item"> -->
                   <a class="nav-link" href="{{ url_for('logout') }}" style="float:right">Logout</a>
-                </li>
+                <!-- </li> -->
               {% else %}
                 {% if title == 'Login' %}
-                  <li class="nav-item active">
+                  <a class="nav-link active" href="{{ url_for('login') }}" style="float:right">Login</a>
                 {% else %}
-                  <li class="nav-item">
-                {% endif %}
                   <a class="nav-link" href="{{ url_for('login') }}" style="float:right">Login</a>
-                  </li>
+                {% endif %}
               {% endif %}
               <!-- <a href=" url_for('login') " style="float:right">Login</a> <!--target="_blank"-->
             </div> <!-- ends topnav -->
@@ -72,9 +70,9 @@
     {% endblock %}
 
 
-    {% block content %}{% endblock %}
+  {% block content %}
       <!-- add bootstrap -->
-    {% block app_content %}
+    {% block app_content %}{% endblock %}
 
         <footer class="page-footer font-small blue">
           <div class="row">
