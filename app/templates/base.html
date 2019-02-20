@@ -1,4 +1,4 @@
-<!-- TODO: make the header appear! -->
+<!-- TODO: make the footer appear! -->
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
@@ -49,29 +49,46 @@
             <div class="topnav">
               <a href="{{ url_for('index') }}">Home</a>
               <a href="{{ url_for('contact') }}">Contact</a>
-              <a href="{{ url_for('register') }}" >Register</a>
-              <a href="{{ url_for('login') }}" style="float:right">Login</a> <!--target="_blank"-->
+              <a href="{{ url_for('register') }}">Register</a>
+              {% if current_user.is_authenticated %}
+                <!-- put logout link here -->
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('logout') }}" style="float:right">Logout</a>
+                </li>
+              {% else %}
+                {% if title == 'Login' %}
+                  <li class="nav-item active">
+                {% else %}
+                  <li class="nav-item">
+                {% endif %}
+                  <a class="nav-link" href="{{ url_for('login') }}" style="float:right">Login</a>
+                  </li>
+              {% endif %}
+              <!-- <a href="{ url_for('login') }" style="float:right">Login</a> <!--target="_blank"-->
             </div> <!-- ends topnav -->
           </div> <!-- ends col-md-12 -->
         </div> <!-- ends row -->
       </nav>
     {% endblock %}
 
-    {% block content %}
-      {% block app_content %}{% endblock %}
+
+    {% block content %}{% endblock %}
       <!-- add bootstrap -->
-      <footer class="page-footer font-small blue">
-        <div class="row">
-          <div class= "col-md-12">
-            <h3 id="contact">Contact</h3>
-            <i class="material-icons">email</i>
-            <a href=" mailto:yuriebmori012@gmail.com">
-                  yuriebmori012@gmail.com</a>
+    {% block app_content %}
+
+        <footer class="page-footer font-small blue">
+          <div class="row">
+            <div class= "col-md-12">
+              <h3 id="contact">Contact</h3>
+              <i class="material-icons">email</i>
+              <a href=" mailto:yuriebmori012@gmail.com">
+                    yuriebmori012@gmail.com</a>
           <!-- Copyright - deleted -->
           <!--  <div class="footer-copyright text-center py-3">© 2019 Copyright: <a href="#"> Yurijas.com</a> </div> -->
-          </div> <!-- ends col-md-12 -->
-        </div> <!-- ends row -->
-      </footer>
+            </div> <!-- ends col-md-12 -->
+          </div> <!-- ends row -->
+        </footer>
+      
       <!-- previous footer -->
   <!--  <div class="footer">
           <h2 id="contact">Contact</h2>

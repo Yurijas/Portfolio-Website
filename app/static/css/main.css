@@ -41,7 +41,7 @@ div.header_transbox h1 {
   background-color: #00b0b3;
   opacity: 0.9;
   filter: alpha(opacity=60); /* For IE8 and earlier */
-  /*TODO: Figure out if I want to do sticky or not and how to do*/
+  /* Figure out if I want to do sticky or not and how to do */
   /*position: sticky;
   top: 0;
   z-index: 100;*/
@@ -97,7 +97,7 @@ div.header_transbox h1 {
   float: left;
   width: 45%;
   padding: 20px;
-  height:200px;
+  height: 200px;
 }
 
 /* Add a card effect for articles */
